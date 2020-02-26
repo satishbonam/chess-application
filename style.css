@@ -1,0 +1,14 @@
+#chessBoard{
+    width: 416px;
+    display: flex;
+    border: black 1px solid;
+    flex-wrap: wrap;
+    margin: 100px 100px;
+}
+#chessBoard>div{
+    width: 52px;
+    height: 52px;
+}
+#chessBoard>div>img{
+    width: 30px;
+}
