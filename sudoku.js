@@ -95,7 +95,7 @@ function getRandomArbitrary(min, max) {
 
 function insertNumbers(box, a, b, c, d) {
     var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    var n = getRandomArbitrary(4, 8)
+    var n = getRandomArbitrary(6, 8)
 
     for (l = 0; l < n; l++) {
         var m = getRandomArbitrary(a, b)
@@ -189,10 +189,10 @@ function updateProbableRow(a, c) {
     }
 }
 
-updateProbableColumn(0, 3)
+updateProbableColumn(0, 9)
 
 function updateProbableColumn(a, c) {
-    for (k = 0; k < 1; k++) {
+    for (k = a; k < c; k++) {
         var columnCheck = []
         for (i = 0; i < div[k].length; i++) {
             if (Number(div[i][k].innerHTML) !== 0) {
@@ -261,17 +261,25 @@ for (i = 0; i < 81; i++) {
     // console.log($("#sudokuBoard>div")[i].probables, $("#sudokuBoard>div")[i])
 }
 $("#sudokuBoard>div").click(function (e) {
-
-
-
     $("button").click(function (a) {
+        e.target.style.color = "blue"
+        console.log(e)
         e.target.innerHTML = this.textContent
     })
     $("#keypad>button:nth-of-type(10)").click(function (b) {
-        e.target.innerHTML = ""
+        print("")
     })
 
+    // function print(val) {
+    //     if (val != undefined) {
+    //         console.log(val)
+    //         return val
+    //     }
+    // }
+
+
 })
+
 createKeypad()
 
 function createKeypad() {
