@@ -8,7 +8,7 @@
     <style type="text/css">
         #sudokuBoard {
             float: left;
-            width: 416px;
+            width: 478px;
             display: flex;
             border: black 1px solid;
             flex-wrap: wrap;
@@ -18,12 +18,20 @@
         #sudokuBoard>div {
             width: 52px;
             height: 52px;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="sudokuBoard" class="border-muted"></div>
+    <div id="sudokuBoard" class="border-muted">
+    </div>
+    <div id="keypad"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="sudoku.js"></script>
 </body>
 
