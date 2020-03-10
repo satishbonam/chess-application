@@ -95,7 +95,7 @@ function getRandomArbitrary(min, max) {
 
 function insertNumbers(box, a, b, c, d) {
     var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    var n = getRandomArbitrary(6, 8)
+    var n = getRandomArbitrary(4, 8)
 
     for (l = 0; l < n; l++) {
         var m = getRandomArbitrary(a, b)
@@ -258,5 +258,29 @@ function swap(a, b) {
     return [a, b]
 }
 for (i = 0; i < 81; i++) {
-    console.log($("#sudokuBoard>div")[i].probables, $("#sudokuBoard>div")[i])
+    // console.log($("#sudokuBoard>div")[i].probables, $("#sudokuBoard>div")[i])
+}
+$("#sudokuBoard>div").click(function (e) {
+
+
+
+    $("button").click(function (a) {
+        e.target.innerHTML = this.textContent
+    })
+    $("#keypad>button:nth-of-type(10)").click(function (b) {
+        e.target.innerHTML = ""
+    })
+
+})
+createKeypad()
+
+function createKeypad() {
+    for (i = 1; i < 10; i++) {
+        $("#keypad").append("<button>" + i + "</button>")
+    }
+    $("button").addClass("btn btn-primary m-2")
+    $("#keypad").append("<button>Erase</button>")
+    $("#keypad>button:nth-of-type(10)").addClass("btn btn-secondary btn-lg btn-block").css({
+        "width": "200px"
+    })
 }
